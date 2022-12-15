@@ -1,24 +1,18 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
+import SpecialText from '../components/SpecialText';
+import styles from '../styles/landingPage.style.js';
 
 const HomeScreen = ( {navigation, route} ) => {
     console.log(route);
     return (
       <View style={styles.mainView}>
-        <Text>Home Screen</Text>
+        < SpecialText style={styles.logo} fText="Corner" sText="stone" fTextColor={{color: '#004AAD'}} sTextColor={{color: '#00B5F8'}}/>
           <Button
             title="Go to Details"
             onPress={() => {navigation.navigate("Details")}}/>
       </View>
     )
 };
-
-const styles = StyleSheet.create({
-  mainView: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  }
-});
 
 export default HomeScreen;
