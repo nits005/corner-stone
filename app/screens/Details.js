@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 
-const DetailsScreen = ( {navigation, route} ) => {
+const Details = ( {navigation, route} ) => {
     console.log(route);
     return (
       <View style={styles.mainView}>
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DetailsScreen;
+export default Details;

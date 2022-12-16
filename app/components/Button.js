@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, Pressable } from 'react-native';
-import styles from '../styles/landingPage.style.js';
 
 const Button = ( {onPress, title, buttonStyle, textStyle} ) => {
     return (

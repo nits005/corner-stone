@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 
-const ImageScreen = () => {
+const Image = () => {
     return (
       <View style={styles.mainView}>
         <Text>Image Screen</Text>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ImageScreen;
+export default Image;
