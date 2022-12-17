@@ -1,0 +1,80 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FFFFFF",
+    position: "relative",
+    width: "100%",
+    height: "100%",
+  }, 
+  appName: {
+    position: "absolute",
+    width: "60%",
+    height: "10%",
+    fontSize: 40,
+    top: "15%",
+    left: "20%",
+    color: '#004AAD'
+  },
+  logo: {
+    position: "absolute",
+    width: "37%",
+    height: "20%",
+    top: "26.5%",
+    left: "31%"
+  },
+  text: {
+    position: "absolute",
+    width: "80%",
+    height: "20%",
+    lineHeight: 35,
+    left: "10%",
+    top: "52%",
+    fontStyle: 'normal',
+    fontSize: 28,
+    FontFace: 'Inter',
+    fontWeight: "400px",
+    color: "#666666",
+    textAlign: "center"
+  }, 
+  button: {
+    display: "flex",
+    flexDirection: "row",
+    position: "absolute",
+    padding: "5%",
+    gap: "10%",
+    width: "80%",
+    height: "7%",
+    left: "10%",
+    top: "75%",
+    backgroundColor: "#00B5F8",
+    borderRadius: 6,
+  },
+  buttonText: {
+    width: "60%",
+    height: "80%",
+    left: "100%",
+    FontFace: 'Inter',
+    fontStyle: 'normal',
+    fontWeight: "500px",
+    fontSize: 16,
+    textAlign: "right",
+    color: "#FFFFFF",
+  },
+  smallText: {
+    display: "flex",
+    width: "60%",
+    height: "10%",
+    FontFace: 'Inter',
+    fontStyle: 'normal',
+    fontWeight: "400px",
+    fontSize: 16,
+    display: "flex",
+    textAlign: "center",
+    color: "#0A0A0A",
+    top: "40%",
+  }
+});

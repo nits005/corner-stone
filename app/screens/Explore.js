@@ -1,27 +1,29 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import Button from '../components/Button';
-import exploreStyle from '../styles/explore.style';
+import { View, Text, Image, Pressable } from 'react-native';
+import ExploreStyle from '../styles/ExploreStyle';
 
 const Explore = ( {navigation} ) => {
     return (
-      <View style={exploreStyle.mainView}>
-        <Text style={exploreStyle.appName}>
+      <View style={ExploreStyle.container}>
+        <Text style={ExploreStyle.appName}>
           Corner
-          <Text style={{color: '#00B5F8'}}>
-            stone
-          </Text>
+          <Text style={{color: '#00B5F8'}}>stone</Text>
         </Text>
-        <Image style={exploreStyle.logo} source={require('../assets/img/logo.png')} />
-        <Text style={exploreStyle.text}>
+
+        <Image style={ExploreStyle.logo} source={require('../assets/img/logo.png')} />
+
+        <Text style={ExploreStyle.text}>
           Every person is unique and require mental health support as needed.
         </Text>
-        <Button
-            buttonStyle={exploreStyle.startExploringButton}
-            textStyle={exploreStyle.buttonText}
-            title="Start Exploring"
-            onPress={() => {navigation.navigate("Details")}}/>
-        <Text style={exploreStyle.smallText}>
+
+        <Pressable style={ExploreStyle.button} 
+          onPress={() => {navigation.navigate("Details")}}>
+          <Text style={ExploreStyle.buttonText}>
+            Start Exploring
+          </Text>
+        </Pressable>
+
+        <Text style={ExploreStyle.smallText}>
           Create an account?  SignUp
         </Text>
       </View>

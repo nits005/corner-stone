@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Routes from './app/routes';
+import Routes from './app/Routes';
 
 export default function App() {
   return (
