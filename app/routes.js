@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Details from './screens/Details';
 import Explore from './screens/Explore';
 import Nickname from './screens/Nickname';
 import SelfCare from './screens/SelfCare';
@@ -14,7 +13,7 @@ const Routes = () => {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Nickname">
+          initialRouteName="Explore">
           <Stack.Screen
             name="Explore"
             component={Explore}
@@ -34,10 +33,6 @@ const Routes = () => {
             name="Age"
             component={Age}
             options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Details"
-            component={Details}
           />
         </Stack.Navigator>
       </NavigationContainer>
