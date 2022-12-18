@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Details from './screens/Details';
 import Image from './screens/Image';
 import Explore from './screens/Explore';
+import Nickname from './screens/Nickname';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,11 @@ const Routes = () => {
           <Stack.Screen
             name="Explore"
             component={Explore}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Nickname"
+            component={Nickname}
             options={{ headerShown: false }}
           />
           <Stack.Screen

@@ -19,12 +19,21 @@ export default StyleSheet.create({
     textAlign: "center",
     color: '#004AAD'
   },
-  logo: {
+  logoCircle: {
     position: "absolute",
-    width: "37%",
+    width: "58%",
     height: "20%",
     top: "28%",
-    alignContent: "center"
+    alignContent: "center",
+    borderWidth: 1,
+    borderColor: "#00000029",
+    borderRadius: 100,
+  },
+  logo: {
+    width: "45%",
+    height: "70%",
+    top: "15%",
+    left: "25%",
   },
   text: {
     position: "absolute",

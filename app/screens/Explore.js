@@ -10,14 +10,16 @@ const Explore = ( {navigation} ) => {
           <Text style={{color: '#00B5F8'}}>stone</Text>
         </Text>
 
-        <Image style={ExploreStyle.logo} source={require('../assets/img/logo.png')} />
+        <View style={ExploreStyle.logoCircle}>
+          <Image style={ExploreStyle.logo} source={require('../assets/img/logo.png')} />
+        </View>
 
         <Text style={ExploreStyle.text}>
           Every person is unique and require mental health support as needed.
         </Text>
 
         <Pressable style={ExploreStyle.button} 
-          onPress={() => {navigation.navigate("Details")}}>
+          onPress={() => {navigation.navigate("Nickname")}}>
           <Text style={ExploreStyle.buttonText}>
             Start Exploring
           </Text>
