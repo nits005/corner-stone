@@ -1,10 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  mainView: {
-    flex: 1,
+  container: {
+    display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    background: "#FFFFFF"
-  }
+    backgroundColor: "#FFFFFF",
+    position: "relative",
+    width: "100%",
+    height: "100%",
+  },
 });

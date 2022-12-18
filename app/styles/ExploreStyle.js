@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
+    display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
@@ -12,27 +13,23 @@ export default StyleSheet.create({
   }, 
   appName: {
     position: "absolute",
-    width: "60%",
-    height: "10%",
-    fontSize: 40,
+    width: "80%",
+    fontSize: 50,
     top: "15%",
-    left: "20%",
+    textAlign: "center",
     color: '#004AAD'
   },
   logo: {
     position: "absolute",
     width: "37%",
     height: "20%",
-    top: "26.5%",
-    left: "31%"
+    top: "28%",
+    alignContent: "center"
   },
   text: {
     position: "absolute",
     width: "80%",
-    height: "20%",
-    lineHeight: 35,
-    left: "10%",
-    top: "52%",
+    top: "53%",
     fontStyle: 'normal',
     fontSize: 28,
     FontFace: 'Inter',
@@ -42,7 +39,6 @@ export default StyleSheet.create({
   }, 
   button: {
     display: "flex",
-    flexDirection: "row",
     position: "absolute",
     padding: "5%",
     gap: "10%",
@@ -54,18 +50,15 @@ export default StyleSheet.create({
     borderRadius: 6,
   },
   buttonText: {
-    width: "60%",
-    height: "80%",
-    left: "100%",
     FontFace: 'Inter',
     fontStyle: 'normal',
     fontWeight: "500px",
     fontSize: 16,
-    textAlign: "right",
+    textAlign: "center",
     color: "#FFFFFF",
   },
   smallText: {
-    display: "flex",
+    textAlign: "center",
     width: "60%",
     height: "10%",
     FontFace: 'Inter',
@@ -73,7 +66,6 @@ export default StyleSheet.create({
     fontWeight: "400px",
     fontSize: 16,
     display: "flex",
-    textAlign: "center",
     color: "#0A0A0A",
     top: "40%",
   }
