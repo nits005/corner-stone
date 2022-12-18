@@ -21,7 +21,8 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderColor: "#95DAD7",
         borderRadius: 24,
-        padding: "5%",    
+        paddingLeft: "5%",   
+        paddingRight: "5%",  
     },
     smallText: {
         position: "absolute",

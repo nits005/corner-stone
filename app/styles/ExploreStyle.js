@@ -43,7 +43,7 @@ export default StyleSheet.create({
     padding: "5%",
     gap: "10%",
     width: "80%",
-    height: "7%",
+    height: "6.5%",
     left: "10%",
     top: "75%",
     backgroundColor: "#00B5F8",
