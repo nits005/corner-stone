@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 
 const Details = ( {navigation, route} ) => {
-    console.log(route);
     return (
       <View style={styles.mainView}>
         <Text>Details Screen</Text>

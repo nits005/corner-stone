@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
 import ExploreStyle from '../styles/ExploreStyle';
+import CommonStlye from '../styles/CommonStlye';
 
 const Explore = ( {navigation} ) => {
     return (
-      <View style={ExploreStyle.container}>
+      <View style={CommonStlye.container}>
         <Text style={ExploreStyle.appName}>
           Corner
           <Text style={{color: '#00B5F8'}}>stone</Text>
