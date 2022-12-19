@@ -48,6 +48,9 @@ export default StyleSheet.create({
     top: "25%",
     left: "20%"
   },
+  disableBtn: {
+    backgroundColor: "#E0E0E0"
+  }
   // arrow: {
   //   FontFace: 'Inter',
   //   fontStyle: 'normal',

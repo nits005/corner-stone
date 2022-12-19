@@ -28,8 +28,10 @@ const Nickname = ( {navigation, route} ) => {
           value={name}
         />
 
-        <Pressable style={CommonStlye.arrowBtn} 
-          onPress={() => {navigation.navigate("SelfCare")}}>
+        <Pressable style={[CommonStlye.arrowBtn, name === null && CommonStlye.disableBtn]}
+          onPress={() => {navigation.navigate("SelfCare")}}
+          disabled={name === null}
+        >
             <Image style={CommonStlye.arrowImg} source={require('../assets/img/vector.png')} />
             {/* <Text style={CommonStlye.arrow} >{'>'}</Text> */}
         </Pressable>
