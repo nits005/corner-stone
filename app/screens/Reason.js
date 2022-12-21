@@ -6,35 +6,35 @@ import ReasonStyle from '../styles/ReasonStyle';
 const reasons = [
   {
     name: 'Build Self Esteem',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/build-self-esteem.png'),
   },
   {
     name: 'Better Sleep',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/better-sleep.png'),
   },
   {
     name: 'Reduce Anxiety',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/reduce-anxiety.png'),
   },
   {
     name: 'Improve Performance',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/improve-performance.png'),
   },
   {
     name: 'Reduce Stress',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/reduce-stress.png'),
   },
   {
     name: 'Increase Happiness',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/increase-happiness.png'),
   },
   {
     name: 'Relieve Exam Fear',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/relieve-exam-fear.png'),
   },
   {
     name: 'Reduce Depression',
-    image: require('../assets/img/guided-support.png'),
+    image: require('../assets/img/reduce-depression.png'),
   },
 ];
 
@@ -51,8 +51,8 @@ const Reason = ({navigation}) =>  {
         What brings you to CornerStone?
       </Text>
 
-      {/* <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
-        <ScrollView style={{marginHorizontal: 20}}> */}
+      <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
+        <ScrollView style={{marginHorizontal: 20}}>
           <View style={{ padding: "5%", paddingTop: "10%", flex: 1, top: "15%" }}>
             <View style={{
               flexDirection: "row", flexWrap: "wrap"
@@ -75,8 +75,8 @@ const Reason = ({navigation}) =>  {
               ))}
             </View>
           </View>
-        {/* </ScrollView>
-      </SafeAreaView> */}
+        </ScrollView>
+      </SafeAreaView>
 
       <Pressable style={[CommonStlye.arrowBtn, selectedReasons.length == 0 && CommonStlye.disableBtn, {top: "90%"}]} 
         onPress={() => {navigation.navigate("Loading")}}
