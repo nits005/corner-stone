@@ -1,11 +1,9 @@
 import React from 'react';
-import {Text, View, StyleSheet, ScrollView, Image, TouchableOpacity, Pressable} from 'react-native';
-//import { Pressable, View, Text, Image, TouchableOpacity } from 'react-native';
+import {Text, View, StyleSheet, ScrollView, Image, TouchableOpacity, Pressable, SafeAreaView, StatusBar } from 'react-native';
 import CommonStlye from '../styles/CommonStlye';
 import ReasonStyle from '../styles/ReasonStyle';
 
-
-const REASONS = [
+const reasons = [
   {
     name: 'Build Self Esteem',
     image: require('../assets/img/guided-support.png'),
@@ -40,8 +38,7 @@ const REASONS = [
   },
 ];
 
-const Reason = ({navigation, route}) =>  {
-  const [reasons, setReasons] = React.useState(REASONS);
+const Reason = ({navigation}) =>  {
   const [selectedReasons, setSelectedReasons] = React.useState([]);
 
   const checkIsSelected = (name) => {
@@ -50,36 +47,43 @@ const Reason = ({navigation, route}) =>  {
 
   return (
     <View style={CommonStlye.container}>
-        <Text style={ReasonStyle.heading}>What brings you to CornerStone?</Text>
-        
-        {/* <ScrollView showsVerticalScrollIndicator={false}> */}
-            <View style={styles.grid}>
-                { reasons.map((item) => (
-                    <TouchableOpacity
-                        key={item.name}
-                        onPress={() => {
-                            if (checkIsSelected(item.name)) {
-                            setSelectedReasons((prev) => prev.filter((i) => i !== item.name));
-                            } else {
-                            setSelectedReasons(prev => [...prev, item.name]);
-                            }
-                        }}
-                        style={[styles.gridItem, ReasonStyle.button, checkIsSelected(item.name) && ReasonStyle.selected]}
-                    >
+      <Text style={[CommonStlye.heading, {top: "8%"}]}>
+        What brings you to CornerStone?
+      </Text>
 
-                        <Text style={ReasonStyle.cardTitle}>{ item.name }</Text>
-                        
-                        <Image style={ReasonStyle.avatar} source= {item.image} />   
-                    </TouchableOpacity>
-                ))}
-                </View>
-            {/* </ScrollView> */}
+      {/* <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
+        <ScrollView style={{marginHorizontal: 20}}> */}
+          <View style={{ padding: "5%", paddingTop: "10%", flex: 1, top: "15%" }}>
+            <View style={{
+              flexDirection: "row", flexWrap: "wrap"
+            }}>
+              { reasons.map((item) => (
+                <TouchableOpacity
+                  key={item.name}
+                  onPress={() => {
+                    if (checkIsSelected(item.name)) {
+                      setSelectedReasons((prev) => prev.filter((i) => i !== item.name));
+                    } else {
+                      setSelectedReasons(prev => [...prev, item.name]);
+                    }
+                  }}
+                  style={[ReasonStyle.button, checkIsSelected(item.name) && ReasonStyle.selected]}
+                >
+                  <Text style={ReasonStyle.cardTitle}>{ item.name }</Text>
+                  <Image style={ReasonStyle.avatar} source= {item.image} />   
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        {/* </ScrollView>
+      </SafeAreaView> */}
 
-        <Pressable style={[CommonStlye.arrowBtn, selectedReasons.length == 0 && CommonStlye.disableBtn]} 
-            onPress={() => {navigation.navigate("Loading")}}
-            disabled={selectedReasons.length == 0}>
-            <Image style={CommonStlye.arrowImg} source={require('../assets/img/vector.png')} />
-        </Pressable>
+      <Pressable style={[CommonStlye.arrowBtn, selectedReasons.length == 0 && CommonStlye.disableBtn, {top: "90%"}]} 
+        onPress={() => {navigation.navigate("Loading")}}
+        disabled={selectedReasons.length == 0}
+      >
+        <Image style={CommonStlye.arrowImg} source={require('../assets/img/vector.png')} />
+      </Pressable>
     </View>
   );
 }
@@ -87,8 +91,8 @@ const Reason = ({navigation, route}) =>  {
 const styles = StyleSheet.create({
     grid: {
         top: "40%",
-        paddingLeft:"1%",
-        paddingRight:"1%",
+        paddingLeft:"5%",
+        paddingRight:"5%",
        // justifyContent: 'center',
         flexDirection: 'row',
         flexWrap: 'wrap',

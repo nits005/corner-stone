@@ -1,17 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    heading: {
-        position: "absolute",
-        width: "80%",
-        top: "8%",
-        fontStyle: 'normal',
-        fontSize: 32,
-        FontFace: 'Inter',
-        fontWeight: "400px",
-        color: "#0A0A0A",
-        textAlign: "center"
-    },
     list: {
         top: "22%",
        // width: "80",
@@ -20,13 +9,13 @@ export default StyleSheet.create({
         //flexGrow: 1
     },
     button: {
-        paddingHorizontal: "6%",
-        paddingVertical: "10%",
+        paddingHorizontal: "3%",
+        paddingVertical: "7%",
         backgroundColor: "#FCF2EC",
         alignSelf: "flex-start",
         marginHorizontal: "2%",
         marginVertical: "2%",
-        minWidth: "45%",
+        width: "45%",
         textAlign: "center",
     },
     selected: {
@@ -38,7 +27,9 @@ export default StyleSheet.create({
     },
     cardTitle: {
         alignSelf: "center",
-        paddingBottom: "2%"
+        paddingBottom: "5%",
+        flexWrap: "wrap",
+        minHeight: "5%"
     },
     arrowBtn: {
         width: "11%",
