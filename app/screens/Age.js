@@ -42,7 +42,7 @@ const Age = ({navigation, route}) => {
         )}
 
         <Pressable style={CommonStlye.arrowBtn} 
-          onPress={() => {navigation.navigate("Explore")}}>
+          onPress={() => {navigation.navigate("Reason")}}>
             <Image style={CommonStlye.arrowImg} source={require('../assets/img/vector.png')} />
             {/* <Text style={CommonStlye.arrow} >{'>'}</Text> */}
         </Pressable>

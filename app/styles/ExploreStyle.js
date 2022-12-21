@@ -37,26 +37,6 @@ export default StyleSheet.create({
     color: "#666666",
     textAlign: "center"
   }, 
-  button: {
-    display: "flex",
-    position: "absolute",
-    padding: "5%",
-    gap: "10%",
-    width: "80%",
-    height: "6.5%",
-    left: "10%",
-    top: "75%",
-    backgroundColor: "#00B5F8",
-    borderRadius: 6,
-  },
-  buttonText: {
-    FontFace: 'Inter',
-    fontStyle: 'normal',
-    fontWeight: "500px",
-    fontSize: 16,
-    textAlign: "center",
-    color: "#FFFFFF",
-  },
   smallText: {
     textAlign: "center",
     width: "60%",

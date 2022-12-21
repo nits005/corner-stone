@@ -19,9 +19,9 @@ const Explore = ( {navigation} ) => {
           Every person is unique and require mental health support as needed.
         </Text>
 
-        <Pressable style={ExploreStyle.button} 
+        <Pressable style={CommonStlye.button} 
           onPress={() => {navigation.navigate("Nickname")}}>
-          <Text style={ExploreStyle.buttonText}>
+          <Text style={CommonStlye.buttonText}>
             Start Exploring
           </Text>
         </Pressable>
