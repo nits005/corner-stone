@@ -3,18 +3,19 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   inputs:{
     position: 'absolute',
-    paddingTop: '2.4%',
-    paddingLeft: '18%',
-    color: '#00B5F8',
+    left: "15%",
+    top: "25%"
   },
-  inputContainer: {
+  dateContainer: {
+    position: 'absolute',
     borderColor:'#95DAD7',
-    borderWidth:0.5, 
-    borderRadius:5,  
+    borderWidth: 1, 
+    borderRadius: 5,  
     backgroundColor:'#DBECEF',
+    top: "52%",
     height: '5%',
-    width:'76%',
-    paddingTop: '2%',
-    paddingLeft: '2%'
+    width:'75%',
+    paddingTop: '3%',
+    paddingLeft: '3%'
   },
 });

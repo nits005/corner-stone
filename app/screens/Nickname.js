@@ -11,7 +11,7 @@ const Nickname = ( {navigation, route} ) => {
       <View style={CommonStlye.container}>
         <Image style={NicknameStyle.avatar} source={require('../assets/img/nola.png')} />
 
-        <Text style={CommonStlye.heading}>
+        <Text style={[CommonStlye.heading, {paddingTop: 10}]}>
           Hey! I’m
           <Text style={{color: '#004AAD'}}> Nola</Text>
         </Text>

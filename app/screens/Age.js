@@ -5,13 +5,13 @@ import CommonStlye from '../styles/CommonStlye';
 import AgeStyle from '../styles/AgeStyle';
 
 const Age = ({navigation, route}) => {
-    const [age, setAge] = useState("Age");
+    const [age, setAge] = useState(null);
     const [isDisplayDate, setShow] = useState(false);
 
     const changeSelectedDate = (event, selectedDate) => {
         setShow(false);
         const currentDate = selectedDate;
-        setAge(`${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}`);
+        setAge(`${currentDate.getDate()}/${currentDate.getMonth()}/${currentDate.getFullYear()}`);
     };
 
     const displayDatepicker = () => {
@@ -26,9 +26,14 @@ const Age = ({navigation, route}) => {
           Your age helps us to create a tailored guidance according to your age group.
         </Text>
 
-        <Pressable style={AgeStyle.inputContainer} onPress={displayDatepicker}>
+        <Pressable style={AgeStyle.dateContainer} onPress={displayDatepicker}>
           <Image source={require('../assets/img/calender-Icon.png')} />
-          <TextInput style={AgeStyle.inputs} editable={false} value={age}/>
+          <TextInput 
+            placeholder="Age"
+            style={AgeStyle.inputs} 
+            editable={false} 
+            value={age}
+          />
         </Pressable>
 
         {isDisplayDate && (
@@ -41,8 +46,10 @@ const Age = ({navigation, route}) => {
             />
         )}
 
-        <Pressable style={CommonStlye.arrowBtn} 
-          onPress={() => {navigation.navigate("Reason")}}>
+        <Pressable style={[CommonStlye.arrowBtn, age === null && CommonStlye.disableBtn]}
+           disabled={age === null}
+          onPress={() => {navigation.navigate("Reason")}}
+        >
             <Image style={CommonStlye.arrowImg} source={require('../assets/img/vector.png')} />
             {/* <Text style={CommonStlye.arrow} >{'>'}</Text> */}
         </Pressable>

@@ -1,17 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({ 
-    heyContainer: {
-        padding: 0,
-        gap: "10%",
-        width: "80%",
-        height: "65%"
-    },
+    // heyContainer: {
+    //     padding: 0,
+    //     gap: "10%",
+    //     width: "80%",
+    //     height: "65%"
+    // },
     avatar: {
         position: "absolute",
-        top: "20%",
-        width: "15%",
-        height: "7%"
+        top: "20%"
     },
     input: {
         position: "absolute",
